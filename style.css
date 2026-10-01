@@ -1,0 +1,648 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    background: white;
+
+    padding: 18px 0;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.nav-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+.nav-menu {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.nav-menu a {
+
+    text-decoration: none;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+
+.nav-menu a:hover {
+
+    color: #2563eb;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 65px 0;
+}
+
+
+.hero-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 8px;
+}
+
+
+.hero h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+.hero p {
+
+    font-size: 17px;
+
+    opacity: 0.95;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    padding: 50px 0;
+}
+
+
+.calculator-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.calculator-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.calculator-header h2 {
+
+    font-size: 22px;
+}
+
+
+.clear-button {
+
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 8px 14px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.clear-button:hover {
+
+    background: #fecaca;
+}
+
+
+/* =========================
+   DISPLAY
+========================= */
+
+.display {
+
+    background: #111827;
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    text-align: right;
+
+    min-height: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.previous-display {
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    min-height: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+.current-display {
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.buttons button {
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+.buttons button:hover {
+
+    background: #e5e7eb;
+}
+
+
+.buttons button:active {
+
+    transform: scale(0.94);
+}
+
+
+/* =========================
+   FUNCTION BUTTON
+========================= */
+
+.buttons .function {
+
+    background: #e5e7eb;
+
+    color: #374151;
+}
+
+
+.buttons .function:hover {
+
+    background: #d1d5db;
+}
+
+
+/* =========================
+   OPERATOR BUTTON
+========================= */
+
+.buttons .operator {
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 22px;
+}
+
+
+.buttons .operator:hover {
+
+    background: #bfdbfe;
+}
+
+
+/* =========================
+   EQUAL BUTTON
+========================= */
+
+.buttons .equals {
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 22px;
+}
+
+
+.buttons .equals:hover {
+
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   HISTORY
+========================= */
+
+.history {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.history-header h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+}
+
+
+.history-header p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.history-clear {
+
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.history-clear:hover {
+
+    background: #fecaca;
+}
+
+
+/* =========================
+   HISTORY LIST
+========================= */
+
+.history-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-height: 430px;
+
+    overflow-y: auto;
+}
+
+
+.history-item {
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+.history-item:hover {
+
+    background: #eff6ff;
+
+    border-color: #bfdbfe;
+}
+
+
+.history-expression {
+
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.history-result {
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+.empty-history {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #888;
+}
+
+
+.empty-history span {
+
+    display: block;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 750px) {
+
+    .calculator-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .nav-content {
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .nav-menu {
+
+        gap: 18px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .container {
+
+        width: 92%;
+    }
+
+
+    .calculator,
+    .history {
+
+        padding: 18px;
+    }
+
+
+    .buttons {
+
+        gap: 7px;
+    }
+
+
+    .buttons button {
+
+        height: 55px;
+
+        font-size: 17px;
+    }
+
+
+    .current-display {
+
+        font-size: 28px;
+    }
+
+
+    .history-header {
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
