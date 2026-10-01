@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KalkulatorKita - Kalkulator Online</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="container nav-content">
+
+            <div class="logo">
+                🧮 KalkulatorKita
+            </div>
+
+            <div class="nav-menu">
+                <a href="#kalkulator">Kalkulator</a>
+                <a href="#riwayat">Riwayat</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-icon">
+                🧮
+            </div>
+
+            <h1>Kalkulator Online</h1>
+
+            <p>
+                Hitung berbagai operasi matematika
+                dengan cepat dan mudah.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN -->
+    <main class="container" id="kalkulator">
+
+        <div class="calculator-layout">
+
+
+            <!-- KALKULATOR -->
+            <section class="calculator">
+
+                <div class="calculator-header">
+
+                    <h2>Kalkulator</h2>
+
+                    <button
+                        id="clearAll"
+                        class="clear-button"
+                        type="button"
+                    >
+                        AC
+                    </button>
+
+                </div>
+
+
+                <!-- DISPLAY -->
+                <div class="display">
+
+                    <div
+                        id="previousDisplay"
+                        class="previous-display"
+                    ></div>
+
+                    <div
+                        id="currentDisplay"
+                        class="current-display"
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="buttons">
+
+                    <button
+                        class="function"
+                        data-action="clear"
+                        type="button"
+                    >
+                        C
+                    </button>
+
+                    <button
+                        class="function"
+                        data-action="backspace"
+                        type="button"
+                    >
+                        ⌫
+                    </button>
+
+                    <button
+                        class="function"
+                        data-action="percent"
+                        type="button"
+                    >
+                        %
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-operator="/"
+                        type="button"
+                    >
+                        ÷
+                    </button>
+
+
+                    <button
+                        data-number="7"
+                        type="button"
+                    >
+                        7
+                    </button>
+
+                    <button
+                        data-number="8"
+                        type="button"
+                    >
+                        8
+                    </button>
+
+                    <button
+                        data-number="9"
+                        type="button"
+                    >
+                        9
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-operator="*"
+                        type="button"
+                    >
+                        ×
+                    </button>
+
+
+                    <button
+                        data-number="4"
+                        type="button"
+                    >
+                        4
+                    </button>
+
+                    <button
+                        data-number="5"
+                        type="button"
+                    >
+                        5
+                    </button>
+
+                    <button
+                        data-number="6"
+                        type="button"
+                    >
+                        6
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-operator="-"
+                        type="button"
+                    >
+                        −
+                    </button>
+
+
+                    <button
+                        data-number="1"
+                        type="button"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        data-number="2"
+                        type="button"
+                    >
+                        2
+                    </button>
+
+                    <button
+                        data-number="3"
+                        type="button"
+                    >
+                        3
+                    </button>
+
+                    <button
+                        class="operator"
+                        data-operator="+"
+                        type="button"
+                    >
+                        +
+                    </button>
+
+
+                    <button
+                        class="function"
+                        data-action="sign"
+                        type="button"
+                    >
+                        ±
+                    </button>
+
+                    <button
+                        data-number="0"
+                        type="button"
+                    >
+                        0
+                    </button>
+
+                    <button
+                        data-number="."
+                        type="button"
+                    >
+                        .
+                    </button>
+
+                    <button
+                        class="equals"
+                        data-action="calculate"
+                        type="button"
+                    >
+                        =
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIWAYAT -->
+            <section
+                class="history"
+                id="riwayat"
+            >
+
+                <div class="history-header">
+
+                    <div>
+
+                        <h2>📋 Riwayat</h2>
+
+                        <p>
+                            Perhitungan terakhir
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="clearHistory"
+                        class="history-clear"
+                        type="button"
+                    >
+                        Hapus
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="historyList"
+                    class="history-list"
+                >
+
+                    <div class="empty-history">
+
+                        <span>📋</span>
+
+                        <p>
+                            Belum ada riwayat
+                            perhitungan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 KalkulatorKita | Website Pemrograman Web
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
